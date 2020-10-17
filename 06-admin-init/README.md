@@ -24,7 +24,7 @@ macOS : 왼쪽 상단 위 IntelliJ IDEA -> Preferences ->  build, Execution, Dev
 2. Spring Boot 버전 변경
     - 기존 2.1.6 => 변경 2.3.4
   
-3. gradle build 변경 ( MVC + JPA + Lombok 로 생성시 자동으로 동일해 집니다. )
+3. gradle build 변경 ( MVC + JPA + Lombok 로 생성시 자동으로 동일해 집니다. [Link](https://github.com/steve-developer/fastcampus-java/tree/master) )
     ```
     변경전
     plugins {
