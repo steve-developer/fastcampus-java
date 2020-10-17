@@ -10,10 +10,10 @@
 * Lombok annotation processing 설정 <br>
 window : 왼쪽 상단 위 file -> settings -> build, Execution, Deveployment -> Compiler > Annotation Processors -> Enable annotation prossing 체크 <br><br>
 macOS : 왼쪽 상단 위 IntelliJ IDEA -> Preferences ->  build, Execution, Deveployment -> Compiler > Annotation Processors -> Enable annotation prossing 체크 <br>
-<img src="/images/20201017_151448.png" width="800" height="700"></img>
+<img src="/06-admin-init/images/20201017_151448.png" width="800" height="700"></img>
 
 * 또는 아래처럼 프로젝트 진행시에 오른쪽 하단 경고 창을 통해서 설정 할 수 있습니다.<br><br>
-<img src="/images/20201017_172845.png" width="1200" height="500"></img>
+<img src="/06-admin-init/images/20201017_172845.png" width="1200" height="500"></img>
 
 <br><br>
 
@@ -93,10 +93,10 @@ macOS : 왼쪽 상단 위 IntelliJ IDEA -> Preferences ->  build, Execution, Dev
 
     ```
 
-3. 05번째 강의에서 WorkBench로 Table 생성하는 부분 자동화로 변경 <br>
-    변경점 ( 필수 변경 X ) 기존 강의대로 진행 해도 괜찮지만 조금더 편리하게 변경 하였습니다.
-    * src/main/java/resources/application.properties -> src/main/java/resources/application.yaml 변경 <br>
-    * src/main/java/resources/application.yaml 에 jpa 관련 자동 실행 추가 <br><br>
+3. 05번째 강의에서 WorkBench로 Table 생성하는 부분 자동화로 변경 하였습니다.<br>
+    잘 안되신다면 기존 강의대로 진행 해도 괜찮지만 해당 방법이 조금 더 편리하게 생성 가능 합니다.
+    * src/main/java/resources/application.properties -> src/main/java/resources/application.yaml 확장자 변경 <br>
+    * src/main/java/resources/application.yaml 에 아래 내용 처럼 jpa 관련 자동 실행 추가 <br><br>
     
     [before 예전 application.properties]
     ```
@@ -158,10 +158,10 @@ macOS : 왼쪽 상단 위 IntelliJ IDEA -> Preferences ->  build, Execution, Dev
     <br><br>
     
     1. MySQL Workbench로 접속 <br><br>
-    <img src="/images/20201018_014332.png" width="1200" height="500"></img><br><br>
+    <img src="/06-admin-init/images/20201018_014332.png" width="1200" height="500"></img><br><br>
     
     2. 왼쪽 상단 + sql 아이콘 클릭 sql 명령어 실행 <br><br>
-    <img src="/images/20201018_014309.png" width="1200" height="500"></img><br><br>
+    <img src="/06-admin-init/images/20201018_014309.png" width="1200" height="500"></img><br><br>
         ```
         -- MySQL Workbench Forward Engineering
         
@@ -356,10 +356,10 @@ macOS : 왼쪽 상단 위 IntelliJ IDEA -> Preferences ->  build, Execution, Dev
         SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
         ```
     3. 왼쪽 상단 새로 고침 버튼을 눌러서 생성된 Schema 및 Table 확인 <br><br>
-    <img src="/images/20201018_014406.png" width="1200" height="500"></img><br><br>
+    <img src="/06-admin-init/images/20201018_014406.png" width="1200" height="500"></img><br><br>
     
     4. Application 실행하여 정상 적인 실행 확인 <br><br>
-    <img src="/01.project-init/images/20201018_015043.png" width="1200" height="500"></img><br><br>
+    <img src="/06-admin-init/images/20201018_015043.png" width="1200" height="500"></img><br><br>
 
 
 #### JPA Test Code를 JUnit5로 변경 하였습니다.
