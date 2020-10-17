@@ -25,11 +25,11 @@
 * JDK 설치는 기존과 동일합니다. 버전만 11 버전으로 설치 하시면 됩니다.<br>
 * 프로젝트 생성 <br><br>
     1. Spring Initializr 에서 Project SDK 를 JAVA 11버전을 선택 합니다. <br><br>
-    <img src="/images/20201017_144659.png" width="1200" height="500"></img><br><br>
+    <img src="/01-project-init/images/20201017_144659.png" width="1200" height="500"></img><br><br>
     2. 상세 설정에서 package name, type, language, packaging, java version 을 설정 합니다. <br><br>
-        <img src="/images/20201017_231556.png" width="1200" height="500"></img><br><br>
+        <img src="/01-project-init/images/20201017_231556.png" width="1200" height="500"></img><br><br>
     2. Dependencies 에서 Web -> Spring Web 를 선택 <br><br>
-    <img src="/images/20201017_231617.png" width="1200" height="500"></img><br><br>
+    <img src="/01-project-init/images/20201017_231617.png" width="1200" height="500"></img><br><br>
     <br>
 
 #### 업데이트 된 build.gradle 파일
