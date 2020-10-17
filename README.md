@@ -22,14 +22,14 @@
   
 
 #### 변경된 프로젝트 생성 방법
-* JDK 설치는 기존과 동일합니다. 버전만 11 버전으로 설치 하시면 됩니다.<br>
+* JDK 설치는 기존과 동일합니다. 버전만 11 버전으로 설치 하시면 됩니다. [Link](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html) <br>
 
 <br>
 
 #### DB를 포함한 쉬운 프로젝트 생성 방법 
 #### JPA 미설정시 Application이 실행되지 않습니다. [04번째 강의 Lombok과 JPA] 부터 사용해주세요.)
 
-
+* MVC 프로젝트생성 [LINK](https://github.com/steve-developer/fastcampus-java/tree/master/01-project-init) <br><br>
 * MVC+ Lombok + JPA 프로젝트 생성 <br><br>
     1.  Spring Initializr 에서 Project SDK 를 JAVA 11버전을 선택 합니다. <br><br>
     <img src="/images/20201017_144659.png" width="1200" height="500"></img><br><br>

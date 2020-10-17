@@ -1,11 +1,11 @@
-#FastCampus Java 과정 Renewal
+# FastCampus Java 과정 Renewal
 
-####기존에 제공 되어 졌었던 패스트 캠퍼스 어드민 개발을 현재의 버전에 맞게 Renewal 합니다.
+#### 기존에 제공 되어 졌었던 패스트 캠퍼스 어드민 개발을 현재의 버전에 맞게 Renewal 합니다.
 <br>
 
 #### 필수 변경점
 * Java 버전 변경 
-  - 기존 1.8 => 변경 11
+  - 기존 1.8 => 변경 11 [Link](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
   
 * Spring Boot 버전 변경
   - 기존 2.1.6 => 변경 2.3.4
@@ -22,7 +22,7 @@
 <br>  
 
 #### 변경된 프로젝트 생성 방법
-* JDK 설치는 기존과 동일합니다. 버전만 11 버전으로 설치 하시면 됩니다.<br>
+* JDK 설치는 기존과 동일합니다. 버전만 11 버전으로 설치 하시면 됩니다. [Link](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html) <br>
 * 프로젝트 생성 <br><br>
     1. Spring Initializr 에서 Project SDK 를 JAVA 11버전을 선택 합니다. <br><br>
     <img src="/01-project-init/images/20201017_144659.png" width="1200" height="500"></img><br><br>
