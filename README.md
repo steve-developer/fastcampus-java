@@ -29,14 +29,16 @@
 #### DB를 포함한 쉬운 프로젝트 생성 방법 
 #### JPA 미설정시 Application이 실행되지 않습니다. [04번째 강의 Lombok과 JPA] 부터 사용해주세요.)
 
-* MVC 프로젝트생성 [LINK](https://github.com/steve-developer/fastcampus-java/tree/master/01-project-init) <br><br>
+* MVC 프로젝트생성 [Link](https://github.com/steve-developer/fastcampus-java/tree/master/01-project-init) <br><br>
 * MVC+ Lombok + JPA 프로젝트 생성 <br><br>
     1.  Spring Initializr 에서 Project SDK 를 JAVA 11버전을 선택 합니다. <br><br>
     <img src="/images/20201017_144659.png" width="1200" height="500"></img><br><br>
-    2. Dependencies 에서 Developer Tools -> Lombok 를 선택 <br><br>
+    2. 상세 설정에서 package name, type, language, packaging, java version 을 설정 합니다. <br><br>
+    <img src="/01-project-init/images/20201017_231556.png" width="1200" height="500"></img><br><br>
+    3. Dependencies 에서 Developer Tools -> Lombok 를 선택 <br><br>
     <img src="/images/20201017_144810.png" width="1200" height="500"></img><br><br>
-    3. Dependencies 에서 Web -> Spring Web 를 선택 <br><br>
+    4. Dependencies 에서 Web -> Spring Web 를 선택 <br><br>
     <img src="/images/20201017_144834.png" width="1200" height="500"></img><br><br>
-    4. Dependencies 에서 SQL -> Spring Data JPA, MySql Driver 를 선택 <br><br>
+    5. Dependencies 에서 SQL -> Spring Data JPA, MySql Driver 를 선택 <br><br>
     <img src="/images/20201017_144958.png" width="1200" height="500"></img><br><br>
     
