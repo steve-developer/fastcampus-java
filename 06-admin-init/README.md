@@ -132,7 +132,7 @@ macOS : 왼쪽 상단 위 IntelliJ IDEA -> Preferences ->  build, Execution, Dev
       datasource:
         url: dbc:mysql://localhost:3306/study?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true # 새로 추가된 옵션 schema 가 없는 경우 생성
         username: root
-        password: rootroot
+        password: root
         driver-class-name: com.mysql.cj.jdbc.Driver
         schema: classpath:schema.sql  # 새로 추가된 옵션 src/main/resource/schema.sql
         initialization-mode: always   # 새로 추가된 옵션 위의 schema.sql 파일을 실행 시켜 준다.
@@ -157,7 +157,7 @@ macOS : 왼쪽 상단 위 IntelliJ IDEA -> Preferences ->  build, Execution, Dev
       datasource:
         url: dbc:mysql://localhost:3306/study?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true
         username: root
-        password: rootroot
+        password: root
         driver-class-name: com.mysql.cj.jdbc.Driver
 
     logging:
