@@ -1,15 +1,21 @@
 package com.fastcampus.java.repository;
 
-import com.example.study.StudyApplicationTests;
-import com.example.study.model.entity.Item;
-import org.junit.Assert;
-import org.junit.Test;
+
+import com.fastcampus.java.model.entity.Item;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
 import java.time.LocalDateTime;
 import java.util.Optional;
 
-public class ItemRepositoryTest extends StudyApplicationTests {
+@DataJpaTest                                                                    // JPA 테스트 관련 컴포넌트만 Import
+@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)    // 실제 db 사용
+@DisplayName("ItemRepositoryTest 테스트")
+public class ItemRepositoryTest {
 
     @Autowired
     private ItemRepository itemRepository;
@@ -31,7 +37,7 @@ public class ItemRepositoryTest extends StudyApplicationTests {
 
 
         Item newItem = itemRepository.save(item);
-        Assert.assertNotNull(newItem);
+        Assertions.assertNotNull(newItem);
     }
 
 
@@ -40,6 +46,6 @@ public class ItemRepositoryTest extends StudyApplicationTests {
         Long id = 1L;
 
         Optional<Item> item = itemRepository.findById(id);
-        Assert.assertTrue(item.isPresent());
+        Assertions.assertTrue(item.isPresent());
     }
 }

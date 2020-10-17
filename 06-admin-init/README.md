@@ -92,8 +92,20 @@ macOS : 왼쪽 상단 위 IntelliJ IDEA -> Preferences ->  build, Execution, Dev
     }
 
     ```
+3.  lombok 적용시 코드 변경 SearchParam Class
+    ```
+    @Data
+    @AllArgsConstructor
+    @NoArgsConstructor  // << 기본 생성자 추가
+    public class SearchParam {
+    
+        private String account;
+        private String email;
+        private int page;
+    }
+    ```   
 
-3. 05번째 강의에서 WorkBench로 Table 생성하는 부분 자동화로 변경 하였습니다.<br>
+4.  5번째 강의에서 WorkBench로 Table 생성하는 부분 자동화로 변경 하였습니다.<br>
     잘 안되신다면 기존 강의대로 진행 해도 괜찮지만 해당 방법이 조금 더 편리하게 생성 가능 합니다.
     * src/main/java/resources/application.properties -> src/main/java/resources/application.yaml 확장자 변경 <br>
     * src/main/java/resources/application.yaml 에 아래 내용 처럼 jpa 관련 자동 실행 추가 <br><br>
@@ -362,8 +374,8 @@ macOS : 왼쪽 상단 위 IntelliJ IDEA -> Preferences ->  build, Execution, Dev
     <img src="/06-admin-init/images/20201018_015043.png" width="1200" height="500"></img><br><br>
 
 
-#### JPA Test Code를 JUnit5로 변경 하였습니다.
-* 테스트 코드 JUnit5 로 변경 (필수)
+#### JPA Test Code를 기존 @SpringBootTest를 쓰는 코드에서 JUnit5 @DataJpaTest 단위 테스트로 변경 하였습니다.
+* 테스트 코드 JUnit5 로 변경 (필수) src.test.java.com.fastcampus.java package를 참고해주세요
 
 
 
@@ -409,34 +421,30 @@ macOS : 왼쪽 상단 위 IntelliJ IDEA -> Preferences ->  build, Execution, Dev
 * Junit5
     - org.springframework.util Assert 대신에 org.junit.jupiter.api 에 있는 Assertions 사용    
     
+    
 #### Example
 ```
-@SpringBootTest
 @DataJpaTest                                                                    // JPA 테스트 관련 컴포넌트만 Import
-@Import({JpaConfig.class, AdminAuditorAware.class})                             // JPA 관련 Class Import
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)    // 실제 db 사용
-@DisplayName("학생 정보 Repository 테스트")
-public class StudentRepositoryTest {
+@DisplayName("AdminUser Repository 테스트")
+public class AdminUserRepositoryTest {
 
     @Autowired
-    private StudentRepository studentRepository;                                // Student Repository 테스트
+    private AdminUserRepository adminUserRepository;
 
-    @Test                   // JUnit Test Annotation
-    @Transactional          // 데이터 테스트 후 롤백 ( auto increment index 는 롤백 안됨)
-    @DisplayName("학생 정보 생성 테스트")
+    @Test
+    @DisplayName("AdminUser Create 테스트")
     public void create(){
-        Student student = Student.builder()
-                .account("student01")
-                .password("student01")
-                .status(StudentStatus.REGISTERED)
-                .email("student01@gmail.com")
-                .phoneNumber("010-1111-1111")
-                .registeredAt(LocalDateTime.now())
-                .build();
+        AdminUser adminUser = new AdminUser();
+        adminUser.setAccount("AdminUser01");
+        adminUser.setPassword("AdminUser01");
+        adminUser.setStatus("REGISTERED");
+        adminUser.setRole("PARTNER");
+        adminUser.setCreatedAt(LocalDateTime.now());
+        adminUser.setCreatedBy("AdminServer");
 
-        Student newStudent = studentRepository.save(student);
-        Assertions.assertNotNull(newStudent);           // save 된 경우 저장된 객체를 반환
-        Assertions.assertNotNull(newStudent.getId());   // JPA save 시 id를 자동으로  반환
+        AdminUser newAdminUser = adminUserRepository.save(adminUser);
+        Assertions.assertNotNull(newAdminUser);
     }
 }
 ```

@@ -1,16 +1,21 @@
 package com.fastcampus.java.repository;
 
-import com.example.study.StudyApplicationTests;
-import com.example.study.model.entity.User;
-import org.junit.Assert;
-import org.junit.Test;
+import com.fastcampus.java.model.entity.User;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.Optional;
 
-public class UserRepositoryTest extends StudyApplicationTests {
+@DataJpaTest                                                                    // JPA 테스트 관련 컴포넌트만 Import
+@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)    // 실제 db 사용
+@DisplayName("ItemRepositoryTest 테스트")
+public class UserRepositoryTest {
 
     // Dependency Injection (DI)
     @Autowired
@@ -39,7 +44,7 @@ public class UserRepositoryTest extends StudyApplicationTests {
         user.setCreatedBy(createdBy);
 
         User newUser = userRepository.save(user);
-        Assert.assertNotNull(newUser);
+        Assertions.assertNotNull(newUser);
     }
 
     @Test
@@ -47,7 +52,7 @@ public class UserRepositoryTest extends StudyApplicationTests {
     public void read(){
 
         User user = userRepository.findFirstByPhoneNumberOrderByIdDesc("010-1111-2221");
-        Assert.assertNotNull(user);
+        Assertions.assertNotNull(user);
     }
 
     @Test
@@ -70,7 +75,7 @@ public class UserRepositoryTest extends StudyApplicationTests {
     public void delete(){
         Optional<User> user = userRepository.findById(3L);
 
-        Assert.assertTrue(user.isPresent());    // false
+        Assertions.assertTrue(user.isPresent());    // false
 
 
         user.ifPresent(selectUser->{
@@ -79,7 +84,7 @@ public class UserRepositoryTest extends StudyApplicationTests {
 
         Optional<User> deleteUser = userRepository.findById(3L);
 
-        Assert.assertFalse(deleteUser.isPresent()); // false
+        Assertions.assertFalse(deleteUser.isPresent()); // false
     }
 
 }

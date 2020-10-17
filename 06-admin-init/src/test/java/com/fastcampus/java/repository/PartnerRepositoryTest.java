@@ -1,14 +1,19 @@
 package com.fastcampus.java.repository;
 
-import com.example.study.StudyApplicationTests;
-import com.example.study.model.entity.Partner;
-import org.junit.Assert;
-import org.junit.Test;
+import com.fastcampus.java.model.entity.Partner;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
 import java.time.LocalDateTime;
 
-public class PartnerRepositoryTest extends StudyApplicationTests {
+@DataJpaTest                                                                    // JPA 테스트 관련 컴포넌트만 Import
+@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)    // 실제 db 사용
+@DisplayName("ItemRepositoryTest 테스트")
+public class PartnerRepositoryTest {
 
     @Autowired
     private PartnerRepository partnerRepository;
@@ -41,8 +46,8 @@ public class PartnerRepositoryTest extends StudyApplicationTests {
         partner.setCategoryId(categoryId);
 
         Partner newPartner = partnerRepository.save(partner);
-        Assert.assertNotNull(newPartner);
-        Assert.assertEquals(newPartner.getName(), name);
+        Assertions.assertNotNull(newPartner);
+        Assertions.assertEquals(newPartner.getName(), name);
     }
 
 }

@@ -1,15 +1,20 @@
 package com.fastcampus.java.repository;
 
-import com.example.study.StudyApplicationTests;
-import com.example.study.model.entity.OrderGroup;
-import org.junit.Assert;
-import org.junit.Test;
+import com.fastcampus.java.model.entity.OrderGroup;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-public class OrderGroupRepositoryTest extends StudyApplicationTests {
+@DataJpaTest                                                                    // JPA 테스트 관련 컴포넌트만 Import
+@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)    // 실제 db 사용
+@DisplayName("ItemRepositoryTest 테스트")
+public class OrderGroupRepositoryTest {
 
     @Autowired
     private OrderGroupRepository orderGroupRepository;
@@ -32,7 +37,7 @@ public class OrderGroupRepositoryTest extends StudyApplicationTests {
         orderGroup.setUserId(1L);
 
         OrderGroup newOrderGroup = orderGroupRepository.save(orderGroup);
-        Assert.assertNotNull(newOrderGroup);
+        Assertions.assertNotNull(newOrderGroup);
 
     }
 
