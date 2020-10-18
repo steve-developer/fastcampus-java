@@ -3,7 +3,26 @@
 #### 기존에 제공 되어 졌었던 패스트 캠퍼스 어드민 개발을 현재의 버전에 맞게 Renewal 합니다.
 ***
 
-#### 필수 변경점
+
+#### 강의별 자료 링크 
+* [01 개발 환경설정](https://github.com/steve-developer/fastcampus-java/tree/master/01-project-init)
+* [03 REST API](https://github.com/steve-developer/fastcampus-java/tree/master/03-rest-api)
+* [04 Lombok-JPA CRUD](https://github.com/steve-developer/fastcampus-java/tree/master/04-jpa-crud)
+* [06 어드민 프로젝트 시작](https://github.com/steve-developer/fastcampus-java/tree/master/06-admin-init)
+* [06 어드민 프로젝트 연관관계 설정](https://github.com/steve-developer/fastcampus-java/tree/master/06-jpa-join)
+* [07 CRUD 인터페이스 정의와 ResponseBody 공통부 작성](https://github.com/steve-developer/fastcampus-java/tree/master/07-crud-controller)
+* [08 사용자 API](https://github.com/steve-developer/fastcampus-java/tree/master/08-01-service-user-api)
+* [08 상품 API](https://github.com/steve-developer/fastcampus-java/tree/master/08-02-service-item-api)
+* [08 주문내역 API](https://github.com/steve-developer/fastcampus-java/tree/master/08-03-service-ordergroup-api)
+* [09 JPA ENUM](https://github.com/steve-developer/fastcampus-java/tree/master/09-01-jpa-enum)
+* [09 추상화적용하기](https://github.com/steve-developer/fastcampus-java/tree/master/09-02-refactoring)
+* [10 샘플데이터 생성하기](https://github.com/steve-developer/fastcampus-java/tree/master/10-sample)
+* [11 페이징처리](https://github.com/steve-developer/fastcampus-java/tree/master/11-paging)
+* [12 화면처리하기](https://github.com/steve-developer/fastcampus-java/tree/master/12-view)
+
+<br>
+
+#### 변경점
 * Java 버전 변경 
   - 기존 1.8 => 변경 11 [Link](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
   
