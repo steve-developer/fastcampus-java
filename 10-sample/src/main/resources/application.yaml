@@ -1,0 +1,20 @@
+spring:
+  jpa:
+    show-sql: true
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/study?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true # 새로 추가된 옵션 schema 가 없는 경우 생성
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    schema: classpath:schema.sql  # 새로 추가된 옵션 src/main/resource/schema.sql
+    data: classpath:data.sql      # 새로 추가된 옵션, src/main/resource/data.sql 에 있는 내용 실행
+    initialization-mode: always   # 새로 추가된 옵션 위의 schema.sql 파일을 실행 시켜 준다.
+
+
+logging:
+  level:
+    root: info
+    com.zaxxer.hikari.HikariConfig: debug
+    org.hibernate.SQL: debug
+    hibernate.type.descriptor.sql.BasicBinder: trace
