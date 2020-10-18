@@ -151,3 +151,7 @@ gradle-app.setting
 **/build/
 
 # End of https://www.toptal.com/developers/gitignore/api/java,intellij,gradle
+07-crud-controller/.idea/**
+08-03-service-ordergroup-api/.idea/**
+09-02-refactoring/.idea/**
+10-sample/.idea/**
