@@ -69,8 +69,8 @@
 2. 적절한 곳에 압축을 해제 합니다.<br>
     <img src="/images/20201018_143914.png" width="800" height="700"></img><br><br>
     
-3. Intellij 에서 해당 폴더에서 열고자 하는 프로젝트의 build.gradle 파일을 선택 합니다.<br>
+3. Intellij 에서 File => Open 해당 폴더에서 열고자 하는 프로젝트의 build.gradle 파일을 선택 합니다.<br>
     <img src="/images/20201018_143940.png" width="400" height="700"></img><br><br>
 
 4. open as project를 선택하여 진행하시면 됩니다.<br>
-    <img src="/images/20201018_143951.png.png" width="400" height="200"></img><br><br> 
+    <img src="/images/20201018_143951.png" width="400" height="200"></img><br><br> 
