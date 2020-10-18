@@ -151,6 +151,7 @@ gradle-app.setting
 **/build/
 
 # End of https://www.toptal.com/developers/gitignore/api/java,intellij,gradle
+
 04-jpa-crud/.idea/**
 06-admin-init/.idea/**
 06-jpa-join/.idea/**
@@ -158,3 +159,4 @@ gradle-app.setting
 08-01-service-user-api/.idea/**
 08-02-service-item-api/.idea/**
 08-03-service-ordergroup-api/.idea/**
+
