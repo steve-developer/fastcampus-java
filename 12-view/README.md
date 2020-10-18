@@ -10,10 +10,10 @@
 * Lombok annotation processing 설정 <br>
 window : 왼쪽 상단 위 file -> settings -> build, Execution, Deveployment -> Compiler > Annotation Processors -> Enable annotation prossing 체크 <br><br>
 macOS : 왼쪽 상단 위 IntelliJ IDEA -> Preferences ->  build, Execution, Deveployment -> Compiler > Annotation Processors -> Enable annotation prossing 체크 <br>
-<img src="/10-sample/images/20201017_151448.png" width="800" height="700"></img>
+<img src="/12-view/images/20201017_151448.png" width="800" height="700"></img>
 
 * 또는 아래처럼 프로젝트 진행시에 오른쪽 하단 경고 창을 통해서 설정 할 수 있습니다.<br><br>
-<img src="/10-sample/images/20201018_015920.png" width="1200" height="500"></img>
+<img src="/12-view/images/20201018_015920.png" width="1200" height="500"></img>
 
 <br><br>
 
@@ -94,5 +94,5 @@ macOS : 왼쪽 상단 위 IntelliJ IDEA -> Preferences ->  build, Execution, Dev
     ```
 
 7. web broswer로 실행하여 확인
-    <img src="/12-view/images/ 20201018_141708.png" width="1200" height="500"></img>
+    <img src="/12-view/images/20201018_141708.png" width="1200" height="500"></img>
    
