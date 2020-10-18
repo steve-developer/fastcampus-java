@@ -7,18 +7,8 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema study
 -- -----------------------------------------------------
-DROP SCHEMA IF EXISTS `study` ;
-
--- -----------------------------------------------------
--- Schema study
--- -----------------------------------------------------
 CREATE SCHEMA IF NOT EXISTS `study` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_bin ;
 USE `study` ;
-
--- -----------------------------------------------------
--- Table `study`.`admin_user`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `study`.`admin_user` ;
 
 CREATE TABLE IF NOT EXISTS `study`.`admin_user` (
   `id` BIGINT(20) NOT NULL AUTO_INCREMENT COMMENT 'index',
@@ -40,12 +30,6 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_bin;
 
-
--- -----------------------------------------------------
--- Table `study`.`category`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `study`.`category` ;
-
 CREATE TABLE IF NOT EXISTS `study`.`category` (
   `id` BIGINT(20) NOT NULL AUTO_INCREMENT,
   `type` VARCHAR(50) NOT NULL,
@@ -58,12 +42,6 @@ CREATE TABLE IF NOT EXISTS `study`.`category` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_bin;
-
-
--- -----------------------------------------------------
--- Table `study`.`partner`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `study`.`partner` ;
 
 CREATE TABLE IF NOT EXISTS `study`.`partner` (
   `id` BIGINT(20) NOT NULL AUTO_INCREMENT,
@@ -86,12 +64,6 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_bin;
 
-
--- -----------------------------------------------------
--- Table `study`.`item`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `study`.`item` ;
-
 CREATE TABLE IF NOT EXISTS `study`.`item` (
   `id` BIGINT(20) NOT NULL AUTO_INCREMENT,
   `status` VARCHAR(50) NULL DEFAULT NULL,
@@ -112,12 +84,6 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_bin;
 
-
--- -----------------------------------------------------
--- Table `study`.`user`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `study`.`user` ;
-
 CREATE TABLE IF NOT EXISTS `study`.`user` (
   `id` BIGINT(20) NOT NULL AUTO_INCREMENT COMMENT 'index',
   `account` VARCHAR(12) NOT NULL,
@@ -135,12 +101,6 @@ CREATE TABLE IF NOT EXISTS `study`.`user` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_bin;
-
-
--- -----------------------------------------------------
--- Table `study`.`order_group`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `study`.`order_group` ;
 
 CREATE TABLE IF NOT EXISTS `study`.`order_group` (
   `id` BIGINT(20) NOT NULL AUTO_INCREMENT,
@@ -162,12 +122,6 @@ CREATE TABLE IF NOT EXISTS `study`.`order_group` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_bin;
-
-
--- -----------------------------------------------------
--- Table `study`.`order_detail`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `study`.`order_detail` ;
 
 CREATE TABLE IF NOT EXISTS `study`.`order_detail` (
   `id` BIGINT(20) NOT NULL AUTO_INCREMENT,
