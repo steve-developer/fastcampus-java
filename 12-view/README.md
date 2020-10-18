@@ -94,5 +94,5 @@ macOS : 왼쪽 상단 위 IntelliJ IDEA -> Preferences ->  build, Execution, Dev
     ```
 
 7. web broswer로 실행하여 확인
-    <img src="/12-view/images/ 20201018_141708.png" width="1200" height="500"></img>
+    <img src="/12-view/images/20201018_141708.png" width="1200" height="500"></img>
    
