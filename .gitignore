@@ -154,3 +154,4 @@ gradle-app.setting
 04-jpa-crud/.idea/**
 06-admin-init/.idea/**
 06-jpa-join/.idea/**
+07-crud-controller/.idea/**
