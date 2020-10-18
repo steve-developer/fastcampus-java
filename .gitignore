@@ -161,4 +161,6 @@ gradle-app.setting
 08-03-service-ordergroup-api/.idea/**
 09-02-refactoring/.idea/**
 10-sample/.idea/**
+11-paging/.idea/**
+
 

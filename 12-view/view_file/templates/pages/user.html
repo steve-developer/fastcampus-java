@@ -1,0 +1,179 @@
+<html lang="ko"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org/" xmlns:v-on="http://www.w3.org/1999/xhtml"
+      xmlns:v-bind="http://www.w3.org/1999/xhtml">
+
+<!-- head Start-->
+<div th:replace="fragment/head :: head"></div>
+<!-- head End-->
+
+
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+
+    <!-- HEADER Start -->
+    <div th:replace="fragment/headerTitle :: headerTitle"></div>
+    <!-- HEADER End -->
+
+    <!-- Side Menu Start -->
+    <div th:replace="fragment/sideMenu :: sideMenu(${code},${menuList})"></div>
+    <!-- Side Menu End -->
+
+
+    <!-- Contents-->
+    <div class="content-wrapper">
+        <section class="content-header">
+            <h1>
+                사용자 관리
+                <small>회원 관리</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> 사용자 관리</a></li>
+                <li class="active">회원 관리</li>
+            </ol>
+        </section>
+
+        <section class="content">
+
+            <!--<div class="row">
+                <div class="col-xs-12">
+                    <div class="box box-danger">
+                        <div class="box-header with-border">
+                            <h3 class="box-title"></h3>
+                        </div>
+                        <div class="box-body">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <label for="email">Email</label>
+                                    <input id="email" type="text" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="col-xs-3">
+                                    <label for="account">Account</label>
+                                    <input id="account" type="text" class="form-control" placeholder="Account">
+                                </div>
+                                <div class="col-xs-3">
+                                    <label for="phoneNumber">PhoneNumber</label>
+                                    <input id="phoneNumber" type="text" class="form-control" placeholder="PhoneNumber">
+                                </div>
+                                <div class="col-xs-3">
+                                    <label for="itemName">Name</label>
+                                    <input id="itemName" type="text" class="form-control" placeholder="Name">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-footer">
+                            <button id="search" type="submit" class="btn btn-primary bg-light-blue-gradient pull-right">검색</button>
+                        </div>
+                    </div>
+                </div>
+            </div>--><!-- row end-->
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="box">
+                        <div class="box-header">
+                            <h3 class="box-title">결과</h3>
+                        </div>
+                        <!-- /.box-header -->
+                        <div class="box-body">
+                            <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+                                <div class="row">
+                                    <div class="col-sm-6"></div>
+                                    <div class="col-sm-6"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <table id="example2" class="table table-bordered table-hover dataTable"
+                                               role="grid" aria-describedby="example2_info">
+
+                                            <thead>
+                                            <tr role="row">
+                                                <th class="text-center bg-light-blue-gradient" tabindex="0" rowspan="1" colspan="1">
+                                                    id
+                                                </th>
+                                                <th class="text-center bg-light-blue-gradient" tabindex="0" rowspan="1" colspan="1">
+                                                    계정
+                                                </th>
+                                                <th class="text-center bg-light-blue-gradient" tabindex="0" rowspan="1" colspan="1">
+                                                    상태
+                                                </th>
+                                                <th class="text-center bg-light-blue-gradient" tabindex="0" rowspan="1" colspan="1">
+                                                    e-mail
+                                                </th>
+                                                <th class="text-center bg-light-blue-gradient" tabindex="0" rowspan="1" colspan="1">
+                                                    전화번호
+                                                </th>
+                                                <th class="text-center bg-light-blue-gradient" tabindex="0" rowspan="1" colspan="1">
+                                                    가입일
+                                                </th>
+                                                <th class="text-center bg-light-blue-gradient" tabindex="0" rowspan="1" colspan="1">
+                                                    해지일
+                                                </th>
+                                            </tr>
+                                            </thead>
+                                            <tbody id="itemList">
+                                            <tr role="row" class="odd" v-for="dto in itemList">
+                                                <td class="text-center">{{dto.id}}</td>
+                                                <td class="text-center">{{dto.account}}</td>
+                                                <td class="text-center">{{dto.status}}</td>
+                                                <td class="text-center">{{dto.email}}</td>
+                                                <td class="text-center">{{dto.phone_number}}</td>
+                                                <td class="text-center">{{dto.registered_at}}</td>
+                                                <td class="text-center">{{dto.unregistered_at}}</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <div id="showPage" class="dataTables_info" role="status" aria-live="polite">
+                                            Showing {{currentPage}} to 10 of {{totalElements}} entries
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-7">
+                                        <div class="dataTables_paginate paging_simple_numbers" id="pageBtn">
+                                            <ul class="pagination">
+                                                <li class="paginate_button previous" id="previousBtn">
+                                                    <a href="javascript:;" v-on:click="previousClick()">이전</a>
+                                                </li>
+
+                                                <li class="paginate_button" v-for="btn in btnList" v-bind:btn_id="btn" v-on:click="indexClick(btn)">
+                                                    <a href="javascript:;" aria-controls="example2">{{btn}}</a>
+                                                </li>
+
+                                                <li class="paginate_button next" id="nextBtn">
+                                                    <a href="javascript:;" v-on:click="nextClick()">다음</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+    <!-- Content End -->
+
+    <!-- Footer Start -->
+    <div th:replace="fragment/footer :: footer"></div>
+    <!-- Footer End -->
+
+    <!-- controlSidebar Start -->
+    <div th:replace="fragment/controlSidebar :: controlSidebar"></div>
+    <!-- controlSidebar End -->
+
+
+    <div class="control-sidebar-bg"></div>
+</div>
+
+
+<script src="/app/user.js"></script>
+</body>
+</html>

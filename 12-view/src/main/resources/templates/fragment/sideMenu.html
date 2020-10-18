@@ -1,0 +1,33 @@
+<html lang="ko"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org/">
+
+<aside class="main-sidebar" th:fragment="sideMenu(code,menuList)">
+    <section class="sidebar">
+        <ul class="sidebar-menu" data-widget="tree">
+            <th:block th:each="entry : ${menuList}">
+                <li th:class="${entry.code == code ? 'active':''}">
+                    <a th:href="${entry.url}">
+                        <i class="fa fa-link"></i>
+                        <span th:text="${entry.title}"></span>
+                    </a>
+                </li>
+            </th:block>
+
+            <!--<li class="treeview">
+                <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
+                    <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="#">Link in level 2</a></li>
+                    <li><a href="#">Link in level 2</a></li>
+                </ul>
+            </li>-->
+        </ul>
+    </section>
+</aside>
+
+
+</html>
